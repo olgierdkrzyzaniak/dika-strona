@@ -1,63 +1,36 @@
 "use client";
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import styles from "./Navbar.module.css";
 
-const Navbar = () => {
-  const controls = useAnimation();
-
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-
-    controls.start({
-      background: `rgba(255, 255, 255, ${scrollY / 100})`,
-    });
-  };
-
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+function Navbar() {
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 0.12], [5, 1]);
   return (
-    <motion.nav
-      initial={{ background: "rgba(255, 255, 255, 0)" }}
-      animate={controls}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        padding: "20px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        borderBottom: "1px solid #ccc",
-        zIndex: 1000,
-      }}
-    >
-      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-        Logo
-      </motion.div>
-      <motion.div
-        style={{
-          display: "flex",
-        }}
-      >
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          style={{ marginRight: "20px" }}
-        >
-          Home
+    <nav className={styles.Navbar}>
+      <ul className={styles.MenuList}>
+        <div className={styles.Group}>
+          <li>
+            <a href="#about">o poradni</a>
+          </li>
+          <li>
+            <a href="#track">o współpracy</a>
+          </li>
+        </div>
+        <motion.div className={styles.Logo} style={{ scale }}>
+          Dika
         </motion.div>
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-          About
-        </motion.div>
-      </motion.div>
-    </motion.nav>
+        <div className={styles.Group}>
+          <li>
+            <a href="#price">oferta</a>
+          </li>
+          <li>
+            <a href="#contact">kontakt</a>
+          </li>
+        </div>
+      </ul>
+    </nav>
   );
-};
+}
 
 export default Navbar;

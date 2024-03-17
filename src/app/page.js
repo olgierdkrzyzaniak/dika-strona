@@ -1,15 +1,28 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Navbar from "@/components/Navbar";
-import Example from "@/components/Example";
-import TitleReveal from "@/components/TitleReveal";
-import Footer from "@/components/Footer";
+import { Playfair_Display } from "next/font/google";
 
-export default function Home() {
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import About from "@/components/About";
+import Track from "@/components/Track";
+import Price from "@/components/Price";
+import Contact from "@/components/Contact";
+import Home from "@/components/Home";
+import Title from "@/components/Title";
+
+import clsx from "clsx";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  style: "italic",
+});
+
+export default function Page() {
   return (
-    <main className={styles.main}>
+    <main className={clsx(styles.main, playfair.className)}>
       <Navbar />
-      <Home />
+      {/* <Home /> */}
       <About />
       <Track />
       <Price />

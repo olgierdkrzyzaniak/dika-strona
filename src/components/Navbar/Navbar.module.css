@@ -1,0 +1,45 @@
+.Group {
+  display: flex;
+  gap: clamp(1rem, 10vw, 5rem);
+  color: hsl(16, 96%, 50%, 100%);
+  max-width: 250px;
+  min-width: fit-content;
+  flex-shrink: 99999;
+  flex-basis: 250px;
+}
+
+.Navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  font-weight: 600;
+  padding: 1rem 2rem;
+}
+
+.MenuList {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.Logo {
+  flex: 1;
+  flex-basis: 100px;
+  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 600;
+  transform: translateY(10.5rem);
+}
+
+.Group li {
+  text-wrap: wrap;
+  font-size: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.Group li::after {
+  content: "-";
+}
+
+.Group li::before {
+  content: "-";
+}

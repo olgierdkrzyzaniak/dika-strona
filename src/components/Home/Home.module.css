@@ -1,0 +1,22 @@
+.container {
+  font-size: clamp(15rem, 35vw, 30rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+}
+
+.Title {
+  font-size: inherit;
+  margin-top: 5rem;
+  font-weight: 600;
+  padding-right: 0.1em;
+  letter-spacing: -0.065em;
+  margin-bottom: 1rem;
+  color: red;
+  background: -webkit-linear-gradient(#ff4500, #ff440030);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
