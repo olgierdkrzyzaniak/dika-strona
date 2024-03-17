@@ -14,6 +14,7 @@
   top: 0;
   font-weight: 600;
   padding: 1rem 2rem;
+  --fontsize: clamp(2rem, 5vw, 3rem);
 }
 
 .MenuList {
@@ -23,12 +24,19 @@
 }
 
 .Logo {
+  position: relative;
+  top: calc(var(--fontsize) / -2);
   flex: 1;
   flex-basis: 100px;
   text-align: center;
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: var(--fontsize);
+  letter-spacing: -0.1em;
   font-weight: 600;
-  transform: translateY(10.5rem);
+  background: -webkit-linear-gradient(#ff4500, #ff44007c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* transform: translateY(10.5rem); */
 }
 
 .Group li {

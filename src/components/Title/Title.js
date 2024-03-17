@@ -6,9 +6,9 @@ import { motion, useScroll, useTransform, transform } from "framer-motion";
 import { useMotionValue } from "framer-motion";
 
 const Title = () => {
-  const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 0.12], [1, 0.2]);
-  const y = useTransform(scrollYProgress, [0, 0.12], [400, 0]);
+  // const { scrollYProgress } = useScroll();
+  // const scale = useTransform(scrollYProgress, [0, 0.12], [1, 0.2]);
+  // const y = useTransform(scrollYProgress, [0, 0.12], [400, 0]);
   return (
     <div
       className={styles.Title}

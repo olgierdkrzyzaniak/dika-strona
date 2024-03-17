@@ -5,7 +5,10 @@ import styles from "./Navbar.module.css";
 
 function Navbar() {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 0.12], [5, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.12], [8, 1]);
+
+  const y = useTransform(scrollYProgress, [0, 0.12], [400, 0]);
+
   return (
     <nav className={styles.Navbar}>
       <ul className={styles.MenuList}>
@@ -17,7 +20,7 @@ function Navbar() {
             <a href="#track">o współpracy</a>
           </li>
         </div>
-        <motion.div className={styles.Logo} style={{ scale }}>
+        <motion.div className={styles.Logo} style={{ scale, y }}>
           Dika
         </motion.div>
         <div className={styles.Group}>
