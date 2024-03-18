@@ -1,22 +1,47 @@
-.container {
-  font-size: clamp(15rem, 35vw, 30rem);
+.home {
+  position: relative;
+  font-size: clamp(2.5rem, 4vw, 5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 95vh;
+  overflow: hidden;
+}
+
+.Heading1,
+.Heading2 {
+  z-index: 2;
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -0.04em;
 }
 
 .Title {
-  font-size: inherit;
-  margin-top: 5rem;
+  z-index: -1000;
+  font-style: italic;
+  font-size: clamp(16rem, 40vw, 24rem);
+  top: 0;
+  width: 100%;
+  text-align: center;
   font-weight: 600;
   padding-right: 0.1em;
-  letter-spacing: -0.065em;
-  margin-bottom: 1rem;
-  color: red;
-  background: -webkit-linear-gradient(#ff4500, #ff440030);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.12em;
+  line-height: 110%;
+  visibility: hidden;
+  text-wrap: nowrap;
+  /* user-select: none; */
+}
+
+.Heading1 {
+  text-wrap: wrap;
+  width: min-content;
+  line-height: 100%;
+}
+
+.Heading2 {
+  bottom: 10vw;
+  position: relative;
+  top: -48px;
 }

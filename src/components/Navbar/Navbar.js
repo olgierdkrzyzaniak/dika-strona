@@ -4,11 +4,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
+  //TODO: Use Ref from Home to track the scroll
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 0.12], [8, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.04], [8, 1]);
 
-  const y = useTransform(scrollYProgress, [0, 0.12], [300, 0]);
-  const x = useTransform(scrollYProgress, [0, 0.12], [-30, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.04], [300, 0]);
+  const x = useTransform(scrollYProgress, [0, 0.04], [-30, 0]);
 
   const container = {
     hidden: { opacity: 0 },
@@ -57,7 +58,7 @@ function Navbar() {
             }}
           >
             <motion.div className={styles.Logo} style={{ scale, y, x }}>
-              Dika
+              dika
             </motion.div>
           </motion.div>
         </div>

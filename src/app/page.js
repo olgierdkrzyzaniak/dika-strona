@@ -15,14 +15,14 @@ import clsx from "clsx";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  style: "italic",
+  style: ["italic", "normal"],
 });
 
 export default function Page() {
   return (
     <main className={clsx(styles.main, playfair.className)}>
       <Navbar />
-      {/* <Home /> */}
+      <Home />
       <About />
       <Track />
       <Price />
