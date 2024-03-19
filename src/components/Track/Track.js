@@ -57,6 +57,7 @@ function Track({ lora, inter }) {
           Jak będzie wyglądać<br></br> nasza współpraca
           <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
         </h2>
+        <div className={styles.circle} />
         <div className={styles.Line}>
           <svg
             width="973"
@@ -65,6 +66,7 @@ function Track({ lora, inter }) {
             viewBox="0 220 973 2400"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="slice"
           >
             <path
               d="M117.771 2761.08C126.161 2770.9 142.874 2787.16 142.607 2773.64C142.34 2760.12 139.346 2751.18 137.883 2748.39"
