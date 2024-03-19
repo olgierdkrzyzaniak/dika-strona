@@ -1,22 +1,23 @@
 .Track {
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 4rem;
   margin: 0 auto;
-  width: clamp(500px, 65%, 800px);
+  width: clamp(600px, 65%, 800px);
   max-width: 100%;
 }
 
 .Heading {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  margin-bottom: 16px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .progress {
-  width: 60px;
-  height: 60px;
   margin: 0;
   padding: 0;
   flex-shrink: 0;
@@ -33,21 +34,61 @@
 }
 
 .bg {
-  stroke: orange;
+  stroke: hsl(21, 100%, 54%);
   opacity: 0.2;
+  stroke-width: 3;
+}
+
+.id {
+  position: relative;
+  top: 13px;
+  left: 30px;
+  font-weight: 700;
+  color: hsl(21, 100%, 54%);
 }
 
 .progress .indicator {
-  stroke: orange;
+  stroke: hsl(21, 100%, 54%);
+  stroke-width: 3;
 }
 
 .section {
-  height: 50vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 300px;
-  border: 2px dotted orange;
-  width: clamp(350px, 50%, 500px);
+  /* border: 2px dotted hsl(21, 100%, 54%); */
+  width: clamp(350px, 60%, 600px);
   max-width: 100%;
+}
+
+.paragraph {
+  font-weight: 500;
+}
+
+.SectionHeading {
+  padding-top: 9px;
+  color: hsl(21, 100%, 54%);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+}
+
+.Title {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+}
+
+.Line {
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  left: 25px;
+}
+
+.Line svg {
+  overflow: hidden;
 }

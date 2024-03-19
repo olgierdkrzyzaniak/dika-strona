@@ -2,8 +2,9 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Navbar.module.css";
+import clsx from "clsx";
 
-function Navbar() {
+function Navbar({ font }) {
   //TODO: Use Ref from Home to track the scroll
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 0.04], [8, 1]);
@@ -32,7 +33,7 @@ function Navbar() {
   };
 
   return (
-    <nav className={styles.Navbar}>
+    <nav className={clsx(styles.Navbar, font.className)}>
       <motion.ul
         className={styles.MenuList}
         variants={container}

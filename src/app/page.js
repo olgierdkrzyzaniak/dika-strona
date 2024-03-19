@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Lora } from "next/font/google";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -18,13 +18,28 @@ const playfair = Playfair_Display({
   style: ["italic", "normal"],
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+});
+
 export default function Page() {
   return (
-    <main className={clsx(styles.main, playfair.className)}>
-      <Navbar />
+    <main
+      className={clsx(
+        styles.main,
+        playfair.className,
+        lora.className,
+        inter.className
+      )}
+    >
+      <Navbar font={playfair} />
       <Home />
       <About />
-      <Track />
+      <Track lora={lora} inter={inter} />
       <Price />
       <Contact />
       <Footer />
