@@ -101,3 +101,9 @@ body {
   overflow-x: hidden;
   background: hsl(48, 24%, 96%, 100%);
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

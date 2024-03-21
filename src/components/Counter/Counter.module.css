@@ -1,0 +1,8 @@
+.Counter {
+  padding-top: 9px;
+  color: hsl(21, 100%, 54%);
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+}

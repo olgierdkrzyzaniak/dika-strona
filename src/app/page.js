@@ -38,9 +38,9 @@ export default function Page() {
     >
       <Navbar font={playfair} />
       <Home />
-      <About />
+      <About lora={lora} inter={inter} />
       <Track lora={lora} inter={inter} />
-      <Price />
+      <Price inter={inter} />
       <Contact />
       <Footer />
     </main>

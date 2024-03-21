@@ -1,14 +1,18 @@
-.Track {
+.TrackContainer {
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Track {
   display: flex;
   flex-direction: column;
   gap: 4rem;
   margin: 0 auto;
   width: clamp(600px, 65%, 800px);
   max-width: 100%;
-  border: 3px solid;
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 .Heading {
@@ -16,7 +20,7 @@
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 16px;
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -83,19 +87,6 @@
   font-weight: 400;
   letter-spacing: -0.05em;
   line-height: 100%;
-}
-
-.Line {
-  z-index: -1;
-  position: absolute;
-  top: 100px;
-  left: -250px;
-}
-
-.Line svg {
-  width: 900px;
-  height: 2400px;
-  overflow: hidden;
 }
 
 .circle {

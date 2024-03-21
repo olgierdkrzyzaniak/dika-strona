@@ -12,12 +12,10 @@ const ScrollReveal = () => {
   const [scrollYValue, setScrollYValue] = React.useState(0);
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setScrollYValue(latest * 100);
-    console.log(scrollYValue);
   });
 
   const scaleX = scrollYProgress;
 
-  console.log(scrollYProgress.current);
   return (
     <>
       <motion.div
