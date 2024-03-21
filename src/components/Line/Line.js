@@ -8,7 +8,7 @@ function Line() {
   const { scrollYProgress } = useScroll({
     target: ref,
     //TODO: adjust offset
-    offset: ["start end", "end end"],
+    offset: ["start center", "center center"],
   });
   return (
     <div className={styles.Line} ref={ref}>

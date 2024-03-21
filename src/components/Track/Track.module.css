@@ -13,6 +13,7 @@
   margin: 0 auto;
   width: clamp(600px, 65%, 800px);
   max-width: 100%;
+  padding: 1rem;
 }
 
 .Heading {

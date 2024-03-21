@@ -10,7 +10,7 @@ function Navbar({ font }) {
   const scale = useTransform(scrollYProgress, [0, 0.04], [8, 1]);
 
   const y = useTransform(scrollYProgress, [0, 0.04], [300, 0]);
-  const x = useTransform(scrollYProgress, [0, 0.04], [-30, 0]);
+  const x = useTransform(scrollYProgress, [0, 0.04], [-5, 0]);
 
   const container = {
     hidden: { opacity: 0 },

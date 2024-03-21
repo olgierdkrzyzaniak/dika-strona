@@ -1,0 +1,22 @@
+.Wrapper {
+}
+
+.Wave {
+  position: relative;
+  top: 200px;
+  z-index: -1;
+}
+
+.Background {
+  background-color: #fa4705;
+}
+
+.Footer {
+  padding: 0 1rem 5rem 1rem;
+  color: hsl(48, 24%, 96%, 100%);
+  display: flex;
+  flex-direction: column;
+  margin: 6rem auto;
+  width: clamp(600px, 65%, 800px);
+  max-width: 100%;
+}
