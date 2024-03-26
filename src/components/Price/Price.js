@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./Price.module.css";
 import clsx from "clsx";
 
-function Price({ inter }) {
+function Price({ inter, instrument }) {
   return (
     <div className={styles.Wrapper}>
-      <h2 className={styles.Title}>
+      <h2 className={clsx(styles.Title, instrument.className)}>
         Ceny usług<span style={{ color: "hsl(16, 96%, 50%, 100%)" }}> : </span>
       </h2>
       <section className={styles.Section}>

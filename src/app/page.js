@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Inter, Playfair_Display, Lora } from "next/font/google";
+import { Inter, Playfair_Display, Instrument_Serif } from "next/font/google";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -23,8 +23,9 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const lora = Lora({
+const instrument = Instrument_Serif({
   subsets: ["latin"],
+  weight: ["400"],
 });
 
 export default function Page() {
@@ -33,17 +34,17 @@ export default function Page() {
       className={clsx(
         styles.main,
         playfair.className,
-        lora.className,
+        instrument.className,
         inter.className
       )}
     >
       <Navbar font={playfair} />
       <Home />
-      <About lora={lora} inter={inter} />
-      <Track lora={lora} inter={inter} />
-      <Price inter={inter} />
-      <Contact />
-      <Footer />
+      <About instrument={instrument} inter={inter} />
+      <Track instrument={instrument} inter={inter} />
+      <Price instrument={instrument} inter={inter} />
+      <Contact instrument={instrument} inter={inter} />
+      <Footer instrument={instrument} inter={inter} />
     </main>
   );
 }

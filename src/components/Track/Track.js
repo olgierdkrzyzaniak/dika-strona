@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 import styles from "./Track.module.css";
-import { JetBrains_Mono, Lora } from "next/font/google";
+import { JetBrains_Mono, Instrument_Serif } from "next/font/google";
 import clsx from "clsx";
 import Line from "@/components/Line";
 
@@ -49,12 +49,12 @@ function Item({ style, id, children, ...props }) {
   );
 }
 
-function Track({ lora, inter }) {
+function Track({ instrument, inter }) {
   return (
     <div className={styles.TrackContainer}>
       <Line />
       <div className={styles.Track}>
-        <h2 className={styles.Title}>
+        <h2 className={clsx(styles.Title, instrument.className)}>
           Jak będzie wyglądać<br></br> nasza współpraca
           <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
         </h2>

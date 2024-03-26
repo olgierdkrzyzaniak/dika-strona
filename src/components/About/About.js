@@ -3,12 +3,12 @@ import styles from "./About.module.css";
 import clsx from "clsx";
 import Counter from "@/components/Counter";
 
-function About({ inter, lora }) {
+function About({ inter, instrument }) {
   return (
     <div className={styles.Wrapper}>
       <div className={styles.About}>
         <section id={styles.Section}>
-          <h2 className={styles.Title}>
+          <h2 className={clsx(styles.Title, instrument.className)}>
             Kim jestem{" "}
             <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
           </h2>

@@ -2,7 +2,11 @@
 import React from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import styles from "./Example.module.css";
-import { Lora, Noto_Serif, Playfair_Display } from "next/font/google";
+import {
+  Instrument_Serif,
+  Noto_Serif,
+  Playfair_Display,
+} from "next/font/google";
 import clsx from "clsx";
 
 const noto = Playfair_Display({ subsets: ["latin"], style: "italic" });
