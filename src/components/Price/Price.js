@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 function Price({ inter, instrument }) {
   return (
-    <div className={styles.Wrapper}>
+    <div className={styles.Wrapper} id="price">
       <h2 className={clsx(styles.Title, instrument.className)}>
         Ceny usług<span style={{ color: "hsl(16, 96%, 50%, 100%)" }}> : </span>
       </h2>

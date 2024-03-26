@@ -6,7 +6,7 @@ import Counter from "@/components/Counter";
 function About({ inter, instrument }) {
   return (
     <div className={styles.Wrapper}>
-      <div className={styles.About}>
+      <div className={styles.About} id="about">
         <section id={styles.Section}>
           <h2 className={clsx(styles.Title, instrument.className)}>
             Kim jestem{" "}
@@ -87,9 +87,9 @@ function About({ inter, instrument }) {
             </p>
           </div>
           <div className={styles.CounterWrapper}>
-            <Counter rating>35</Counter>
+            <Counter rating>50</Counter>
             <p className={clsx(inter.className, styles.CounterParagraph)}>
-              O tyle lepszą średnią miała moja córka od Martynki Przysieckiej
+              Średnia ocen na serwisach Znany Lekarz, Google oraz Facebook
             </p>
           </div>
         </div>

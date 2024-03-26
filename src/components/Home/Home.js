@@ -12,7 +12,7 @@ const instrument = Instrument_Serif({
 
 const Home = () => {
   return (
-    <div className={styles.home}>
+    <div className={styles.home} id="home">
       <h2 className={clsx(styles.Heading1, instrument.className)}>
         poradnia dietetyczna
       </h2>

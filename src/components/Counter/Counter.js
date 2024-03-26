@@ -6,6 +6,7 @@ import {
   useTransform,
   useInView,
   motion,
+  useMotionValueEvent,
 } from "framer-motion";
 import styles from "./Counter.module.css"; // Adjust the import path as necessary
 
@@ -14,6 +15,7 @@ function Counter({ children, rating, plus }) {
   const rounded = useTransform(count, Math.round);
   const ref = React.useRef();
   const isInView = useInView(ref, { once: true }); // Configuring it to trigger only once
+  const [value, setValue] = React.useState(0);
 
   React.useEffect(() => {
     if (isInView) {
@@ -26,10 +28,20 @@ function Counter({ children, rating, plus }) {
     }
   }, [isInView, children]); // Reacting to changes in isInView and children
 
+  useMotionValueEvent(rounded, "change", (latest) => {
+    setValue(latest);
+  });
+
   return (
     <h2 ref={ref} className={styles.Counter}>
-      {rating && <span>0.</span>}
-      <motion.span>{rounded}</motion.span>
+      {rating ? (
+        <span>
+          {Math.floor(value / 10) % 10}.{value % 10}
+        </span>
+      ) : (
+        <motion.span>{rounded}</motion.span>
+      )}
+
       <span>{plus && "+"}</span>
     </h2>
   );

@@ -51,7 +51,7 @@ function Item({ style, id, children, ...props }) {
 
 function Track({ instrument, inter }) {
   return (
-    <div className={styles.TrackContainer}>
+    <div className={styles.TrackContainer} id="track">
       <Line />
       <div className={styles.Track}>
         <h2 className={clsx(styles.Title, instrument.className)}>

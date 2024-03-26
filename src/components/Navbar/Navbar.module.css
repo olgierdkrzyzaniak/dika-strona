@@ -9,6 +9,7 @@
 }
 
 .Navbar {
+  z-index: 100;
   font-style: italic;
   width: 100%;
   position: fixed;
