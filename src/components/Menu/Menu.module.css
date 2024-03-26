@@ -47,7 +47,13 @@
   padding: 0 1rem;
 }
 
+.Item:active,
+.Item:focus {
+  outline: revert;
+}
+
 .Button {
+  transform: translateY(-10px);
   border: none;
   background-color: transparent;
   font-weight: 500;

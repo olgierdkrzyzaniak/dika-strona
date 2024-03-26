@@ -39,7 +39,6 @@ export default function Page() {
     >
       <Navbar font={playfair} />
       <Home />
-      <SideMenu />
       <About lora={lora} inter={inter} />
       <Track lora={lora} inter={inter} />
       <Price inter={inter} />
