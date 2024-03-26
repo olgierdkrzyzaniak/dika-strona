@@ -3,6 +3,12 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Navbar.module.css";
 import clsx from "clsx";
+import Menu from "../Menu";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+});
 
 function Navbar({ font }) {
   //TODO: Use Ref from Home to track the scroll
@@ -34,6 +40,29 @@ function Navbar({ font }) {
 
   return (
     <nav className={clsx(styles.Navbar, font.className)}>
+      <div class={styles.NarrowNav}>
+        <Menu />
+        <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 10,
+              damping: 5,
+            }}
+          >
+            <motion.div className={styles.Logo} style={{ scale, y, x }}>
+              dika
+            </motion.div>
+          </motion.div>
+        </div>
+        <div>
+          <a href="#contact" className={clsx(styles.Contact, inter.className)}>
+            kontakt
+          </a>
+        </div>
+      </div>
       <motion.ul
         className={styles.MenuList}
         variants={container}

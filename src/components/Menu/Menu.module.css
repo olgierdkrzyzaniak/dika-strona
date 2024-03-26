@@ -1,0 +1,128 @@
+.Overlay {
+  z-index: 1000;
+  position: fixed;
+  inset: 0;
+  background: rgba(45 0 0 / 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.Dialog:active,
+.Dialog:focus {
+  outline: none;
+}
+
+.Dialog {
+  display: flex;
+  flex-direction: column;
+}
+
+.Heading {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5rem;
+}
+
+.Content {
+  --gap: 16px;
+  --item-height: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--gap);
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid red;
+  padding-bottom: calc(var(--item-height) / 2 + var(--gap) / 2);
+}
+
+.Number {
+  color: hsl(16, 96%, 50%, 100%);
+  letter-spacing: -0.3rem;
+  font-size: 2.5rem;
+}
+
+.Item {
+  height: var(--item-height);
+  font-size: 3rem;
+  padding: 0 1rem;
+}
+
+.Button {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 1rem;
+  color: hsl(16, 96%, 50%, 100%);
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
+.Overlay[data-entering] {
+  animation: mymodal-blur 300ms;
+}
+
+.Overlay[data-exiting] {
+  animation: mymodal-blur 300ms reverse ease-in;
+}
+
+.Modal {
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: hsl(31, 81%, 92%, 100%);
+  outline: none;
+  border-left: 1px solid var(--border-color);
+  box-shadow: -8px 0 20px rgba(0 0 0 / 0.1);
+}
+
+.MenuList {
+  list-style-type: none;
+}
+
+.Modal[data-entering] {
+  animation: mymodal-slide 300ms;
+}
+
+.Modal[data-exiting] {
+  animation: mymodal-slide 300ms reverse ease-in;
+}
+
+.Close {
+  align-self: flex-end;
+  padding: 8px 16px;
+  background: hsl(16, 96%, 50%, 100%);
+  border: transparent;
+  color: white;
+  border-radius: 9999px 9999px;
+}
+
+.Close:hover {
+  cursor: pointer;
+}
+
+@keyframes mymodal-blur {
+  from {
+    background: rgba(45 0 0 / 0);
+    backdrop-filter: blur(0);
+  }
+
+  to {
+    background: rgba(45 0 0 / 0.3);
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes mymodal-slide {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

@@ -10,6 +10,7 @@ import Price from "@/components/Price";
 import Contact from "@/components/Contact";
 import Home from "@/components/Home";
 import Title from "@/components/Title";
+import SideMenu from "@/components/Menu";
 
 import clsx from "clsx";
 
@@ -38,6 +39,7 @@ export default function Page() {
     >
       <Navbar font={playfair} />
       <Home />
+      <SideMenu />
       <About lora={lora} inter={inter} />
       <Track lora={lora} inter={inter} />
       <Price inter={inter} />
