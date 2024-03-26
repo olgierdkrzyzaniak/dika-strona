@@ -77,7 +77,7 @@ function SideMenu() {
                     variants={item}
                     className={clsx(styles.Item)}
                   >
-                    <a href="#about">
+                    <a href="#about" onClick={close}>
                       o poradni{" "}
                       <span className={clsx(styles.Number, inter.className)}>
                         01
@@ -89,7 +89,7 @@ function SideMenu() {
                     variants={item}
                     className={clsx(styles.Item)}
                   >
-                    <a href="#track">
+                    <a href="#track" onClick={close}>
                       o współpracy{" "}
                       <span className={clsx(styles.Number, inter.className)}>
                         02
@@ -102,7 +102,7 @@ function SideMenu() {
                     variants={item}
                     className={clsx(styles.Item)}
                   >
-                    <a href="#price">
+                    <a href="#price" onClick={close}>
                       oferta{" "}
                       <span className={clsx(styles.Number, inter.className)}>
                         03
@@ -114,7 +114,7 @@ function SideMenu() {
                     variants={item}
                     className={clsx(styles.Item)}
                   >
-                    <a href="#contact">
+                    <a href="#contact" onClick={close}>
                       kontakt{" "}
                       <span className={clsx(styles.Number, inter.className)}>
                         04
