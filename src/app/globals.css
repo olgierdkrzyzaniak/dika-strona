@@ -98,7 +98,12 @@ body {
   height: 300vh;
   margin: 0;
   /* background: hsl(48, 24%, 96%, 100%); */
-  background: hsl(31, 81%, 92%, 100%);
+  background: hsl(48, 24%, 96%, 100%);
+}
+
+*::selection {
+  background: hsl(16, 96%, 50%, 100%);
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {

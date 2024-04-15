@@ -52,6 +52,11 @@
   outline: revert;
 }
 
+.Item:hover {
+  background: hsl(16, 96%, 50%, 100%);
+  color: white;
+}
+
 .Button {
   transform: translateY(-10px);
   border: none;

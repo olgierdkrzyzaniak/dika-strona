@@ -42,17 +42,13 @@
   /* transform: translateY(10.5rem); */
 }
 
+.Link {
+  padding: 0.5rem;
+}
+
 .Group li {
   text-wrap: wrap;
   font-size: clamp(0.75rem, 2vw, 1.25rem);
-}
-
-.Group li::after {
-  content: "-";
-}
-
-.Group li::before {
-  content: "-";
 }
 
 .NarrowNav {

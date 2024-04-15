@@ -5,6 +5,7 @@ import styles from "./Navbar.module.css";
 import clsx from "clsx";
 import Menu from "../Menu";
 import { Inter } from "next/font/google";
+import LinkButton from "../LinkButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -71,10 +72,18 @@ function Navbar({ font }) {
       >
         <div className={styles.Group}>
           <motion.li key="1" variants={item}>
-            <a href="#about">o poradni</a>
+            <LinkButton>
+              <a className={styles.Link} href="#about">
+                o poradni
+              </a>
+            </LinkButton>
           </motion.li>
           <motion.li key="2" variants={item}>
-            <a href="#track">o współpracy</a>
+            <LinkButton>
+              <a className={styles.Link} href="#track">
+                o współpracy
+              </a>
+            </LinkButton>
           </motion.li>
         </div>
         <div>
@@ -94,10 +103,18 @@ function Navbar({ font }) {
         </div>
         <div className={styles.Group}>
           <motion.li key="3" variants={item}>
-            <a href="#price">oferta</a>
+            <LinkButton>
+              <a className={styles.Link} href="#price">
+                oferta
+              </a>
+            </LinkButton>
           </motion.li>
           <motion.li key="4" variants={item}>
-            <a href="#contact">kontakt</a>
+            <LinkButton>
+              <a className={styles.Link} href="#contact">
+                kontakt
+              </a>
+            </LinkButton>
           </motion.li>
         </div>
       </motion.ul>

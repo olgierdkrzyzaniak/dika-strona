@@ -44,7 +44,7 @@ export default function Page() {
       <Track instrument={instrument} inter={inter} />
       <Price instrument={instrument} inter={inter} />
       <Contact instrument={instrument} inter={inter} />
-      <Footer instrument={instrument} inter={inter} />
+      <Footer playfair={playfair} instrument={instrument} inter={inter} />
     </main>
   );
 }
