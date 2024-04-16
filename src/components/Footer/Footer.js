@@ -24,14 +24,14 @@ function Footer({ playfair, instrument, inter }) {
         <footer className={styles.Footer}>
           <div class={styles.Wrapper}>
             <h2 className={clsx(styles.Logo, playfair.className)}>Dika</h2>
-            <div>
+            <div className={clsx(inter.className, styles.Contact)}>
               <h3>Kontakt:</h3>
               <p>Halina Krzyżaniak - Dietetyk</p>
               <p>tel: 508 508 080</p>
               <p>e-mail: poradniadika@wp.pl</p>
               <p>ul. Armii Poznań 1, Chodzież</p>
             </div>
-            <ul className={styles.List}>
+            <ul className={clsx(styles.List, inter.className)}>
               <h3>Spis treści:</h3>
               <li>
                 <a href="#home">Początek</a>
@@ -50,7 +50,9 @@ function Footer({ playfair, instrument, inter }) {
               </li>
             </ul>
           </div>
-          <p>© 2024 by Olgierd Krzyżaniak. Kocham Cię mamo :).</p>
+          <p className={styles.Copyright}>
+            © 2024 by Olgierd Krzyżaniak. Kocham Cię mamo :).
+          </p>
         </footer>
       </div>
     </div>
