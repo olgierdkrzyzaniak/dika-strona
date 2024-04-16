@@ -39,6 +39,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-right: 0.2rem;
+  user-select: none;
   /* transform: translateY(10.5rem); */
 }
 

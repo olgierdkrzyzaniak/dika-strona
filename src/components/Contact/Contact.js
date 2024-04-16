@@ -26,12 +26,12 @@ ul. Armii Poznań 1, Chodzież`;
         <p className={styles.SectionParagraph}>poradniadika@wp.pl</p>
       </section>
       <section className={styles.Section}>
+        <h3 className={styles.SectionTitle}>Adres</h3>
         <a href="https://maps.app.goo.gl/SxwAK792MrCLKf9s8" target="blank">
-          <h3 className={styles.SectionTitle}>Adres</h3>
           <p className={styles.SectionParagraph}>ul. Armii Poznań 1</p>
           <p className={styles.SectionParagraph}>64-800 Chodzież</p>
           <p className={styles.SectionTip}>
-            (kliknięcie przeniesie Cię strony Google Maps :)
+            (kliknięcie przeniesie Cię do strony Google Maps :)
           </p>
         </a>
       </section>

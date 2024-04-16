@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 function Footer({ playfair, instrument, inter }) {
   return (
-    <div className={styles.Wrapper}>
+    <div className={styles.Container}>
       <div className={styles.Wave}>
         <svg
           width="2264"
@@ -22,10 +22,17 @@ function Footer({ playfair, instrument, inter }) {
       </div>
       <div className={styles.Background}>
         <footer className={styles.Footer}>
-          <div>
+          <div class={styles.Wrapper}>
             <h2 className={clsx(styles.Logo, playfair.className)}>Dika</h2>
-            <ul>
-              Spis treści:
+            <div>
+              <h3>Kontakt:</h3>
+              <p>Halina Krzyżaniak - Dietetyk</p>
+              <p>tel: 508 508 080</p>
+              <p>e-mail: poradniadika@wp.pl</p>
+              <p>ul. Armii Poznań 1, Chodzież</p>
+            </div>
+            <ul className={styles.List}>
+              <h3>Spis treści:</h3>
               <li>
                 <a href="#home">Początek</a>
               </li>
@@ -42,8 +49,8 @@ function Footer({ playfair, instrument, inter }) {
                 <a href="#contact">Kontakt</a>
               </li>
             </ul>
-            <p>© 2024 by Olgierd Krzyżaniak. Kocham Cię mamo :).</p>
           </div>
+          <p>© 2024 by Olgierd Krzyżaniak. Kocham Cię mamo :).</p>
         </footer>
       </div>
     </div>

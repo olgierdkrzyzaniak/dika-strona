@@ -1,9 +1,6 @@
-.Wrapper {
-}
-
 .Wave {
   position: relative;
-  top: 200px;
+  top: 220px;
   z-index: -1;
 }
 
@@ -23,6 +20,20 @@
   display: flex;
   flex-direction: column;
   margin: 6rem auto;
-  width: clamp(600px, 65%, 800px);
+  width: 100%;
   max-width: 100%;
+}
+
+.Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.List {
+  min-width: 325px;
+  list-style: none;
 }
