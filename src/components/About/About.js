@@ -26,7 +26,7 @@ function About({ inter, instrument }) {
           </p>
         </section>
         <section>
-          <h3 className={styles.SectionHeading}>
+          <h3 className={clsx(styles.SectionHeading, inter.className)}>
             Jakie są moje kwalifikacje{" "}
             <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
           </h3>
