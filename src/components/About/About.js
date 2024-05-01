@@ -37,12 +37,13 @@ function About({ inter, instrument }) {
             specjalizując się w Dietetyce i Planowaniu Żywienia.
           </p>
           <p className={clsx(inter.className, styles.paragraph)}>
-            Ponad dwie dekady doświadczenia, w tym 12 lat poświęconych praktyce
-            dietetycznej oraz wcześniejsza praca w laboratoriach badawczych,
-            pozwoliły mi zgromadzić obszerną wiedzę i doświadczenie w dziedzinie
-            żywności i żywienia. Ta podróż dała mi nie tylko cenne umiejętności,
-            ale także możliwość współpracy z ponad 3000 osób, którym pomogłam
-            odnaleźć satysfakcję i zdrowie w ich codziennym żywieniu.
+            Prawie trzy dekady doświadczenia, w tym 12 lat poświęconych praktyce
+            dietetycznej oraz wcześniejsza praca w zakładach przemysłu
+            spożywczego i laboratoriach badawczych, pozwoliły mi zgromadzić
+            obszerną wiedzę i doświadczenie w dziedzinie żywności i żywienia. Ta
+            podróż dała mi nie tylko cenne umiejętności, ale także możliwość
+            współpracy z ponad 3000 osób, którym pomogłam odnaleźć satysfakcję i
+            zdrowie w ich codziennym żywieniu.
           </p>
         </section>
         <section>
@@ -83,7 +84,7 @@ function About({ inter, instrument }) {
               12
             </Counter>
             <p className={clsx(inter.className, styles.CounterParagraph)}>
-              Lat doświadczenia
+              Lat doświadczenia w pracy dietetyka i 17 lat w branży spożywczej
             </p>
           </div>
           <div className={styles.CounterWrapper}>

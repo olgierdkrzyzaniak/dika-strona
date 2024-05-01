@@ -34,9 +34,18 @@ function Price({ inter, instrument }) {
           <h3 className={styles.Price}>160 zł</h3>
         </div>
         <p className={clsx(inter.className, styles.SectionParagraph)}>
-          Wizyta kontrolna z dietą to dodatkowy tydzień diety, badanie
+          Wizyta kontrolna z jadłospisem to dodatkowy tydzień diety, badanie
           antropometryczne, analiza składu ciała wprowadzenie ewentualnych zmian
           w poprzedniej diecie i dalsze wskazówki odnośnie żywienia
+        </p>
+      </section>
+      <section className={styles.Section}>
+        <div className={styles.SectionHeading}>
+          <h3 className={styles.SectionTitle}>Analiza składu ciała</h3>
+          <h3 className={styles.Price}>50 zł</h3>
+        </div>
+        <p className={clsx(inter.className, styles.SectionParagraph)}>
+          Pomiar masy ciała, wzrostu, analiza składu ciała i omówienie wyniku
         </p>
       </section>
     </div>
