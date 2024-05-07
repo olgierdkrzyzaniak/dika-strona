@@ -19,7 +19,7 @@ function Navbar() {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.5,
+        delayChWildren: 0.5,
         staggerChildren: 0.1,
       },
     },
@@ -58,27 +58,27 @@ function Navbar() {
           </a>
         </div>
       </div>
-      <motion.ul
+      <motion.div
         className={styles.MenuList}
         variants={container}
         initial="hidden"
         animate="visible"
       >
         <div className={styles.LinksWrapper}>
-          <motion.li key="1" variants={item}>
+          <motion.article key="1" variants={item}>
             <LinkButton>
               <a className={styles.Link} href="#about">
                 o poradni
               </a>
             </LinkButton>
-          </motion.li>
-          <motion.li key="2" variants={item}>
+          </motion.article>
+          <motion.article key="2" variants={item}>
             <LinkButton>
               <a className={styles.Link} href="#track">
                 o współpracy
               </a>
             </LinkButton>
-          </motion.li>
+          </motion.article>
         </div>
         <div className={styles.LogoWrapper}>
           <motion.div
@@ -96,22 +96,22 @@ function Navbar() {
           </motion.div>
         </div>
         <div className={styles.LinksWrapper}>
-          <motion.li key="3" variants={item}>
+          <motion.article key="3" variants={item}>
             <LinkButton>
               <a className={styles.Link} href="#price">
                 oferta
               </a>
             </LinkButton>
-          </motion.li>
-          <motion.li key="4" variants={item}>
+          </motion.article>
+          <motion.article key="4" variants={item}>
             <LinkButton>
               <a className={styles.Link} href="#contact">
                 kontakt
               </a>
             </LinkButton>
-          </motion.li>
+          </motion.article>
         </div>
-      </motion.ul>
+      </motion.div>
     </nav>
   );
 }
