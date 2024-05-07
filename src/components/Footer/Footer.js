@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import clsx from "clsx";
 
-function Footer({ playfair, instrument, inter }) {
+function Footer() {
   return (
     <div className={styles.Container}>
       <div className={styles.Wave}>
@@ -22,33 +21,35 @@ function Footer({ playfair, instrument, inter }) {
       </div>
       <div className={styles.Background}>
         <footer className={styles.Footer}>
-          <div class={styles.Wrapper}>
-            <h2 className={clsx(styles.Logo, playfair.className)}>Dika</h2>
-            <div className={clsx(inter.className, styles.Contact)}>
+          <div className={styles.Wrapper}>
+            <h2 className={styles.Logo}>Dika</h2>
+            <div className={styles.Contact}>
               <h3>Kontakt:</h3>
               <p>Halina Krzyżaniak - Dietetyk</p>
               <p>tel: 508 508 080</p>
               <p>e-mail: poradniadika@wp.pl</p>
               <p>ul. Armii Poznań 1, Chodzież</p>
             </div>
-            <ul className={clsx(styles.List, inter.className)}>
+            <div>
               <h3>Spis treści:</h3>
-              <li>
-                <a href="#home">Początek</a>
-              </li>
-              <li>
-                <a href="#about">O poradni</a>
-              </li>
-              <li>
-                <a href="#track">Oferta</a>
-              </li>
-              <li>
-                <a href="#price">Cennik</a>
-              </li>
-              <li>
-                <a href="#contact">Kontakt</a>
-              </li>
-            </ul>
+              <ul className={styles.List}>
+                <li>
+                  <a href="#home">Początek</a>
+                </li>
+                <li>
+                  <a href="#about">O poradni</a>
+                </li>
+                <li>
+                  <a href="#track">Oferta</a>
+                </li>
+                <li>
+                  <a href="#price">Cennik</a>
+                </li>
+                <li>
+                  <a href="#contact">Kontakt</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <p className={styles.Copyright}>
             © 2024 by Olgierd Krzyżaniak. Kocham Cię mamo :).

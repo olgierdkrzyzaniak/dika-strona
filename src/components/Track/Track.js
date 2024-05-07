@@ -3,7 +3,7 @@
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 import styles from "./Track.module.css";
-import { JetBrains_Mono, Instrument_Serif } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import clsx from "clsx";
 import Line from "@/components/Line";
 
@@ -11,7 +11,7 @@ const jetbrains_mono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-function Item({ style, id, children, ...props }) {
+function Item({ style, id, children }) {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -49,12 +49,12 @@ function Item({ style, id, children, ...props }) {
   );
 }
 
-function Track({ instrument, inter }) {
+function Track() {
   return (
     <div className={styles.TrackContainer} id="track">
       <Line />
       <div className={styles.Track}>
-        <h2 className={clsx(styles.Title, instrument.className)}>
+        <h2 className={styles.Title}>
           Jak będzie wyglądać<br></br> nasza współpraca
           <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
         </h2>
@@ -62,7 +62,7 @@ function Track({ instrument, inter }) {
 
         <Item id={1} style={{ alignSelf: "flex-start" }}>
           <h3 className={styles.SectionHeading}>Pierwsza wizyta</h3>
-          <p className={clsx(inter.className, styles.paragraph)}>
+          <p className={styles.paragraph}>
             Na początku naszej współpracy spotkamy się na wizycie, którą
             zaplanujemy tak, abyś czuł się swobodnie i komfortowo. Rozmowa
             będzie jak luźna pogawędka – chcę dowiedzieć się o Tobie jak
@@ -75,7 +75,7 @@ function Track({ instrument, inter }) {
           <h3 className={styles.SectionHeading}>
             Opracowuję dietę dostosowaną do twoich potrzeb
           </h3>
-          <p className={clsx(inter.className, styles.paragraph)}>
+          <p className={styles.paragraph}>
             Na podstawie naszej rozmowy i zebranych informacji, stworzę dla
             Ciebie indywidualną dietę. Chcę, aby była ona nie tylko skuteczna,
             ale też dostosowana do Twojego stylu życia. Odpowiadam na pytania i
@@ -95,7 +95,7 @@ function Track({ instrument, inter }) {
           <h3 className={styles.SectionHeading}>
             Przestrzegasz diety, w tym czasie możesz się ze mną konsultować
           </h3>
-          <p className={clsx(inter.className, styles.paragraph)}>
+          <p className={styles.paragraph}>
             Kiedy już rozpoczniesz podążanie ścieżką zdrowego żywienia, nie
             zostawiam Cię samego. Jestem tutaj, abyś mógł/mogła śmiało zadawać
             pytania, dzielić się swoimi odczuciami i doświadczeniami. Możemy
@@ -109,7 +109,7 @@ function Track({ instrument, inter }) {
           <h3 className={styles.SectionHeading}>
             Wizyta kontrolna i planowanie dalszych działań
           </h3>
-          <p className={clsx(inter.className, styles.paragraph)}>
+          <p className={styles.paragraph}>
             Po pewnym czasie, gdy już zauważysz pierwsze pozytywne efekty,
             spotkamy się ponownie na wizycie kontrolnej. Podczas tego spotkania
             omówimy, jak idzie Ci z realizacją diety, co możemy dostosować lub

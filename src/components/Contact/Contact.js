@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./Contact.module.css";
-import clsx from "clsx";
 import CopyToClipboard from "../CopyToClipboard";
 
-function Contact({ instrument }) {
+function Contact() {
   const contact = `Halina Krzyżaniak - Dietetyk
 tel: 508 508 080
 e-mail: poradniadika@wp.pl
@@ -11,7 +10,7 @@ ul. Armii Poznań 1, Chodzież`;
   return (
     <div className={styles.Wrapper} id="contact">
       <CopyToClipboard content={contact}>
-        <h2 className={clsx(styles.Title, instrument.className)}>
+        <h2 className={styles.Title}>
           Kontakt<span style={{ color: "hsl(16, 96%, 50%, 100%)" }}> :</span>
         </h2>
       </CopyToClipboard>

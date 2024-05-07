@@ -12,6 +12,7 @@
 }
 
 .Text {
+  font-family: var(--font);
   font-size: 1rem;
   font-weight: 500;
   color: hsl(16, 96%, 50%, 100%);

@@ -35,9 +35,11 @@
 
 .SectionParagraph {
   max-width: clamp(350px, 60%, 500px);
+  font-family: var(--font);
 }
 
 .SectionTitle {
+  font-family: var(--font);
   margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 500;

@@ -10,19 +10,7 @@ import {
 } from "react-aria-components";
 
 import styles from "./Menu.module.css";
-import { motion, Variants } from "framer-motion";
-
-import clsx from "clsx";
-import { Instrument_Serif, Inter } from "next/font/google";
-const inter = Inter({
-  subsets: ["latin"],
-});
-
-const instrument = Instrument_Serif({
-  subsets: ["latin"],
-  style: ["italic", "normal"],
-  weight: ["400"],
-});
+import { motion } from "framer-motion";
 
 function SideMenu() {
   let [isOpen, setOpen] = React.useState(false);
@@ -48,10 +36,7 @@ function SideMenu() {
 
   return (
     <DialogTrigger>
-      <Button
-        onPress={() => setOpen(true)}
-        className={clsx(styles.Button, inter.className)}
-      >
+      <Button onPress={() => setOpen(true)} className={styles.Button}>
         Menu
       </Button>
       <ModalOverlay className={styles.Overlay}>
@@ -67,58 +52,30 @@ function SideMenu() {
                   Menu
                 </Heading>
                 <motion.ul
-                  className={clsx(styles.MenuList, instrument.className)}
+                  className={styles.MenuList}
                   variants={container}
                   initial="hidden"
                   animate="visible"
                 >
-                  <motion.li
-                    key="1"
-                    variants={item}
-                    className={clsx(styles.Item)}
-                  >
+                  <motion.li key="1" variants={item} className={styles.Item}>
                     <a href="#about" onClick={close}>
-                      o poradni{" "}
-                      <span className={clsx(styles.Number, inter.className)}>
-                        01
-                      </span>
+                      o poradni <span className={styles.Number}>01</span>
                     </a>
                   </motion.li>
-                  <motion.li
-                    key="2"
-                    variants={item}
-                    className={clsx(styles.Item)}
-                  >
+                  <motion.li key="2" variants={item} className={styles.Item}>
                     <a href="#track" onClick={close}>
-                      o współpracy{" "}
-                      <span className={clsx(styles.Number, inter.className)}>
-                        02
-                      </span>
+                      o współpracy <span className={styles.Number}>02</span>
                     </a>
                   </motion.li>
 
-                  <motion.li
-                    key="3"
-                    variants={item}
-                    className={clsx(styles.Item)}
-                  >
+                  <motion.li key="3" variants={item} className={styles.Item}>
                     <a href="#price" onClick={close}>
-                      oferta{" "}
-                      <span className={clsx(styles.Number, inter.className)}>
-                        03
-                      </span>
+                      oferta <span className={styles.Number}>03</span>
                     </a>
                   </motion.li>
-                  <motion.li
-                    key="4"
-                    variants={item}
-                    className={clsx(styles.Item)}
-                  >
+                  <motion.li key="4" variants={item} className={styles.Item}>
                     <a href="#contact" onClick={close}>
-                      kontakt{" "}
-                      <span className={clsx(styles.Number, inter.className)}>
-                        04
-                      </span>
+                      kontakt <span className={styles.Number}>04</span>
                     </a>
                   </motion.li>
                 </motion.ul>

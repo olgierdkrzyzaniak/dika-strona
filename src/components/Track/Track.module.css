@@ -72,6 +72,7 @@
 
 .paragraph {
   font-weight: 500;
+  font-family: var(--font);
 }
 
 .SectionHeading {

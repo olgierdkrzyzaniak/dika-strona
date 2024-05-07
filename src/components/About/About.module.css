@@ -29,6 +29,7 @@
 }
 
 .paragraph {
+  font-family: var(--font);
   font-weight: 500;
   padding: 1rem;
 }
@@ -43,6 +44,7 @@
 .CounterWrapper {
   max-width: 200px;
   display: flex;
+  font-family: var(--font-heading);
   flex-direction: column;
   align-items: center;
   padding: 16px;
@@ -50,6 +52,7 @@
 }
 
 .CounterParagraph {
+  font-family: var(--font);
   font-size: 1rem;
   font-weight: 500;
   text-align: center;

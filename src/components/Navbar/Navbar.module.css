@@ -1,13 +1,3 @@
-.Group {
-  display: flex;
-  gap: clamp(1rem, 10vw, 5rem);
-  color: hsl(16, 96%, 50%, 100%);
-  max-width: 250px;
-  min-width: fit-content;
-  flex-shrink: 99999;
-  flex-basis: 250px;
-}
-
 .Navbar {
   z-index: 100;
   font-style: italic;
@@ -21,8 +11,28 @@
 
 .MenuList {
   display: flex;
-  justify-content: space-between;
+  flex: 1;
+  justify-content: space-around;
+  align-self: center;
   list-style: none;
+}
+
+.LogoWrapper {
+  margin-left: 1rem;
+  max-width: 150px;
+  min-width: fit-content;
+  flex-shrink: 99999;
+  flex-basis: 150px;
+}
+
+.LinksWrapper {
+  color: hsl(16, 96%, 50%, 100%);
+
+  flex: 1;
+  flex-basis: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  /* gap: clamp(1rem, 10vw, 5rem); */
 }
 
 .Logo {
@@ -32,6 +42,7 @@
   flex-basis: 100px;
   text-align: center;
   font-size: var(--fontsize);
+  font-family: var(--font-title);
   letter-spacing: -0.1em;
   font-weight: 600;
   background: -webkit-linear-gradient(#ff4500, #ff44007c);
@@ -60,6 +71,8 @@
 
 .Contact {
   background: hsl(16, 96%, 50%, 100%);
+  font-family: var(--font);
+  font-style: normal;
   border: transparent;
   padding: 8px;
   color: white;

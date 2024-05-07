@@ -2,22 +2,16 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Navbar.module.css";
-import clsx from "clsx";
 import Menu from "../Menu";
-import { Inter } from "next/font/google";
 import LinkButton from "../LinkButton";
 
-const inter = Inter({
-  subsets: ["latin"],
-});
-
-function Navbar({ font }) {
+function Navbar() {
   //TODO: Use Ref from Home to track the scroll
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 0.04], [8, 1]);
 
   const y = useTransform(scrollYProgress, [0, 0.04], [300, 0]);
-  const x = useTransform(scrollYProgress, [0, 0.04], [-5, 0]);
+  const x = useTransform(scrollYProgress, [0, 0.04], [15, 0]);
 
   const container = {
     hidden: { opacity: 0 },
@@ -40,8 +34,8 @@ function Navbar({ font }) {
   };
 
   return (
-    <nav className={clsx(styles.Navbar, font.className)}>
-      <div class={styles.NarrowNav}>
+    <nav className={styles.Navbar}>
+      <div className={styles.NarrowNav}>
         <Menu />
         <div>
           <motion.div
@@ -59,7 +53,7 @@ function Navbar({ font }) {
           </motion.div>
         </div>
         <div>
-          <a href="#contact" className={clsx(styles.Contact, inter.className)}>
+          <a href="#contact" className={styles.Contact}>
             kontakt
           </a>
         </div>
@@ -70,7 +64,7 @@ function Navbar({ font }) {
         initial="hidden"
         animate="visible"
       >
-        <div className={styles.Group}>
+        <div className={styles.LinksWrapper}>
           <motion.li key="1" variants={item}>
             <LinkButton>
               <a className={styles.Link} href="#about">
@@ -86,7 +80,7 @@ function Navbar({ font }) {
             </LinkButton>
           </motion.li>
         </div>
-        <div>
+        <div className={styles.LogoWrapper}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -101,7 +95,7 @@ function Navbar({ font }) {
             </motion.div>
           </motion.div>
         </div>
-        <div className={styles.Group}>
+        <div className={styles.LinksWrapper}>
           <motion.li key="3" variants={item}>
             <LinkButton>
               <a className={styles.Link} href="#price">

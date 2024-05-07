@@ -29,6 +29,7 @@
 }
 
 .SectionParagraph {
+  font-family: var(--font);
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: -0.05em;
@@ -36,6 +37,8 @@
 }
 
 .SectionTip {
+  font-family: var(--font);
+  font-weight: 500;
   font-size: 1rem;
   line-height: 150%;
   color: hsl(16, 96%, 50%, 100%);
