@@ -22,8 +22,11 @@ const headingFont = Instrument_Serif({
 });
 
 export const metadata = {
-  title: "Poradnia Dietetyczna Dika",
-  description: "Poradnia Dietetyczna Dika w Chodzieży, Halina Krzyżaniak",
+  title: "Poradnia Dietetyczna Dika w Chodzieży - Halina Krzyżaniak",
+  description:
+    "Jestem dietetyczką z Chodzieży z ponad 12 latami doświadczenia w pracy z pacjentami. Oferuje wsparcie dla osób z problemami zdrowotnymi i chcących poprawić nawyki żywieniowe. Specjalizuję się w spersonalizowanych jadłospisach dopasowanych do indywidualnych potrzeb i preferencji.",
+  keywords:
+    "dietetyk, dieta, jadłospis, poradnia, dika, chodzież, piła, budzyń, kaczory, Halina Krzyżaniak, odchudzanie, żywienie, dla cukrzyków, dla dzieci, dla kobiet w ciąży, dla sportowców, dieta wegetariańska, dieta wegańska, zaburzenia odżywiania, alergie pokarmowe, nadwaga, otyłość",
 };
 
 export default function RootLayout({ children }) {
