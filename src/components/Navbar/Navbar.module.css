@@ -56,6 +56,9 @@
 
 .Link {
   padding: 0.5rem;
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .Group li {

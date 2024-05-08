@@ -65,6 +65,45 @@ function About() {
             zdrowszego stylu życia.
           </p>
         </section>
+        <section>
+          <h3 className={styles.SectionHeading}>
+            Oferuję<span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>:</span>
+          </h3>
+          <ul className={styles.List}>
+            <li className={styles.ListItem}>
+              usługi z zakresu edukacji żywieniowej i doradztwa dietetycznego
+            </li>
+            <li className={styles.ListItem}>
+              ocenę stanu odżywienia organizmu (analiza składu ciała, BMI, WHR)
+            </li>
+            <li className={styles.ListItem}>
+              diety regulujące masę ciała (odchudzające, wspomagające przyrost
+              masy)
+            </li>
+            <li className={styles.ListItem}>
+              diety dla osób z problemami zdrowotnymi (cukrzyca, nadciśnienie,
+              hipercholesterolemia, osteoporoza, choroby układu krążenia,
+              schorzenia przewodu pokarmowego)
+            </li>
+            <li className={styles.ListItem}>
+              diety dla dzieci, kobiet w ciąży, sportowców
+            </li>
+            <li className={styles.ListItem}>
+              żywienie w alergiach i nietolerancjach pokarmowych
+            </li>
+            <li className={styles.ListItem}>diety dla wegetarian i wegan</li>
+            <li className={styles.ListItem}>
+              diety dla osób z zaburzeniami odżywiania
+            </li>
+            <li className={styles.ListItem}>
+              żywienie w chorobach nowotworowych
+            </li>
+
+            <li className={styles.ListItem}>
+              wsparcie w zmianie nawyków żywieniowych
+            </li>
+          </ul>
+        </section>
         <p className={styles.paragraph}>
           Nie mogę się doczekać aby usłyszeć twoją historię. Do zobaczenia w
           Poradni! 🌱💚
