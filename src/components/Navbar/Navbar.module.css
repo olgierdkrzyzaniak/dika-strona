@@ -70,9 +70,28 @@
   display: flex;
   gap: 1rem;
   justify-content: space-between;
+  align-items: center;
+}
+
+.NarrowLogo {
+  position: relative;
+  left: 8px;
+  font-size: 2rem;
+  line-height: 90%;
+  font-weight: 600;
+  font-family: var(--font-title);
+  letter-spacing: -0.1em;
+  background: -webkit-linear-gradient(#ff4500, #ff44007c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 0.2rem;
+  user-select: none;
 }
 
 .Contact {
+  position: relative;
+  left: 8px;
   background: hsl(16, 96%, 50%, 100%);
   font-family: var(--font);
   font-style: normal;

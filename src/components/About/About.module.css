@@ -13,6 +13,8 @@
 }
 
 .Title {
+  font-family: var(--font-title);
+
   font-size: 5rem;
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -21,6 +23,7 @@
 }
 
 .SectionHeading {
+  font-family: var(--font-heading);
   margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 500;

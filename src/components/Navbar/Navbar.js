@@ -37,20 +37,9 @@ function Navbar() {
     <nav className={styles.Navbar}>
       <div className={styles.NarrowNav}>
         <Menu />
-        <div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 10,
-              damping: 5,
-            }}
-          >
-            <motion.div className={styles.Logo} style={{ scale, y, x }}>
-              dika
-            </motion.div>
-          </motion.div>
+        <div className={styles.NarrowLogo}>
+          {" "}
+          <a href="#home">dika</a>
         </div>
         <div>
           <a href="#contact" className={styles.Contact}>

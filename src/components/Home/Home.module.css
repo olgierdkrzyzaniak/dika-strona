@@ -24,12 +24,11 @@
 .Title {
   z-index: -1000;
   font-style: italic;
-  font-size: clamp(16rem, 40vw, 24rem);
-  top: 0;
+  font-size: clamp(12rem, 40vw, 24rem);
+  font-family: var(--font-title);
   width: 100%;
   text-align: center;
   font-weight: 600;
-  padding-right: 0.1em;
   letter-spacing: -0.12em;
   line-height: 110%;
   visibility: hidden;
@@ -46,4 +45,24 @@
   bottom: 10vw;
   position: relative;
   top: -48px;
+}
+
+@media (max-width: 600px) {
+  .Title {
+    font-size: 14rem;
+    position: relative;
+    left: -0.5rem;
+    z-index: 0;
+    visibility: revert;
+    background: -webkit-linear-gradient(#ff4500, #ff44007c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 90%;
+  }
+  .Heading2 {
+    bottom: 10vw;
+    position: relative;
+    top: 0;
+  }
 }

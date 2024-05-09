@@ -61,7 +61,6 @@
 }
 
 .Button {
-  transform: translateY(-10px);
   border: none;
   font-family: var(--font);
   font-style: normal;

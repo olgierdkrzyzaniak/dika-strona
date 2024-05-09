@@ -8,6 +8,7 @@
 }
 
 .Title {
+  font-family: var(--font-title);
   font-size: 5rem;
   font-weight: 400;
   letter-spacing: -0.02em;
