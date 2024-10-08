@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 
 function Footer() {
   return (
-    <div className={styles.Container}>
+    <footer className={styles.Container}>
       <div className={styles.Wave}>
         <svg
           width="2264"
@@ -56,7 +56,7 @@ function Footer() {
           </p>
         </footer>
       </div>
-    </div>
+    </footer>
   );
 }
 

@@ -4,7 +4,7 @@ import Counter from "@/components/Counter";
 
 function About() {
   return (
-    <div className={styles.Wrapper}>
+    <section className={styles.Wrapper}>
       <div className={styles.About} id="about">
         <section id={styles.Section}>
           <h2 className={styles.Title}>
@@ -131,7 +131,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

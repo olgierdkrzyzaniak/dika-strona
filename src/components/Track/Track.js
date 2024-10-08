@@ -20,7 +20,7 @@ function Item({ style, id, children }) {
   });
 
   return (
-    <section ref={ref} className={styles.section} style={style}>
+    <article ref={ref} className={styles.section} style={style}>
       <div className={styles.Heading}>
         <span className={clsx(jetbrains_mono.className, styles.id)}>{id}</span>
         <figure className={styles.progress}>
@@ -45,13 +45,13 @@ function Item({ style, id, children }) {
         {children[0]}
       </div>
       {children[1]}
-    </section>
+    </article>
   );
 }
 
 function Track() {
   return (
-    <div className={styles.TrackContainer} id="track">
+    <section className={styles.TrackContainer} id="track">
       <Line />
       <div className={styles.Track}>
         <h2 className={styles.Title}>
@@ -120,7 +120,7 @@ function Track() {
           </p>
         </Item>
       </div>
-    </div>
+    </section>
   );
 }
 
