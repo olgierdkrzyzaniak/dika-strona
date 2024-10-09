@@ -1,6 +1,7 @@
 import { Inter, Playfair_Display, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
+import RespectMotionPreferences from "@/components/RespectMotionPreferences";
 
 const titleFont = Playfair_Display({
   subsets: ["latin"],
@@ -31,16 +32,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={clsx(
-          titleFont.variable,
-          mainFont.variable,
-          headingFont.variable
-        )}
-      >
-        {children}
-      </body>
-    </html>
+    <RespectMotionPreferences>
+      <html lang="en">
+        <body
+          className={clsx(
+            titleFont.variable,
+            mainFont.variable,
+            headingFont.variable
+          )}
+        >
+          {children}
+        </body>
+      </html>
+    </RespectMotionPreferences>
   );
 }
