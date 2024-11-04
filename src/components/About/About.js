@@ -30,7 +30,7 @@ function About() {
             <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
           </h3>
           <p className={styles.paragraph}>
-            Moja edukacyjna podróż rozpoczęła się na Akademii Rolniczej, gdzie z
+            Moja edukacyjna podróż rozpoczęła się na Akademii Rolniczej, gdzie
             studiowałam Technologię Żywności i Żywienia Człowieka, potem
             kontynuowałam naukę na Uniwersytecie Przyrodniczym w Poznaniu,
             specjalizując się w Dietetyce i Planowaniu Żywienia.
