@@ -10,7 +10,7 @@ function Price() {
       <article className={styles.Section}>
         <div className={styles.SectionHeading}>
           <h3 className={styles.SectionTitle}>Pierwsza wizyta</h3>
-          <h3 className={styles.Price}>200 zł</h3>
+          <h3 className={styles.Price}>230 zł</h3>
         </div>
         <p className={styles.SectionParagraph}>
           Pierwsza wizyta to badania antropometryczne, analiza składu ciała,
@@ -20,7 +20,7 @@ function Price() {
       <article className={styles.Section}>
         <div className={styles.SectionHeading}>
           <h3 className={styles.SectionTitle}>Wizyta kontrolna </h3>
-          <h3 className={styles.Price}>70 zł</h3>
+          <h3 className={styles.Price}>80 zł</h3>
         </div>
         <p className={styles.SectionParagraph}>
           Wizyta kontrolna to badanie antropometryczne, analiza składu ciała
@@ -30,7 +30,7 @@ function Price() {
       <article className={styles.Section}>
         <div className={styles.SectionHeading}>
           <h3 className={styles.SectionTitle}>Wizyta kontrolna z dietą</h3>
-          <h3 className={styles.Price}>160 zł</h3>
+          <h3 className={styles.Price}>170 zł</h3>
         </div>
         <p className={styles.SectionParagraph}>
           Wizyta kontrolna z jadłospisem to dodatkowy tydzień diety, badanie
@@ -41,7 +41,7 @@ function Price() {
       <article className={styles.Section}>
         <div className={styles.SectionHeading}>
           <h3 className={styles.SectionTitle}>Analiza składu ciała</h3>
-          <h3 className={styles.Price}>50 zł</h3>
+          <h3 className={styles.Price}>70 zł</h3>
         </div>
         <p className={styles.SectionParagraph}>
           Pomiar masy ciała, wzrostu, analiza składu ciała i omówienie wyniku
