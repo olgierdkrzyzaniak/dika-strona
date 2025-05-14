@@ -10,7 +10,7 @@ function Price() {
       <article className={styles.Section}>
         <div className={styles.SectionHeading}>
           <h3 className={styles.SectionTitle}>Pierwsza wizyta</h3>
-          <h3 className={styles.Price}>230 zł</h3>
+          <h3 className={styles.Price}>250 zł</h3>
         </div>
         <p className={styles.SectionParagraph}>
           Pierwsza wizyta to badania antropometryczne, analiza składu ciała,
