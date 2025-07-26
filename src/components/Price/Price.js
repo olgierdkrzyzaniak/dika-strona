@@ -29,6 +29,15 @@ function Price() {
       </article>
       <article className={styles.Section}>
         <div className={styles.SectionHeading}>
+          <h3 className={styles.SectionTitle}>Spotkanie po latach</h3>
+          <h3 className={styles.Price}>200 zł</h3>
+        </div>
+        <p className={styles.SectionParagraph}>
+          Aktualizacja danych, analiza wyników badań, analiza składu ciała, zalecenia żywieniowe i dieta na 7 dni
+        </p>
+      </article>
+      <article className={styles.Section}>
+        <div className={styles.SectionHeading}>
           <h3 className={styles.SectionTitle}>Wizyta kontrolna z dietą</h3>
           <h3 className={styles.Price}>170 zł</h3>
         </div>
