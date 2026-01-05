@@ -10,7 +10,7 @@ function Price() {
       <article className={styles.Section}>
         <div className={styles.SectionHeading}>
           <h3 className={styles.SectionTitle}>Pierwsza wizyta</h3>
-          <h3 className={styles.Price}>250 zł</h3>
+          <h3 className={styles.Price}>270 zł</h3>
         </div>
         <p className={styles.SectionParagraph}>
           Pierwsza wizyta to badania antropometryczne, analiza składu ciała,
@@ -30,7 +30,7 @@ function Price() {
       <article className={styles.Section}>
         <div className={styles.SectionHeading}>
           <h3 className={styles.SectionTitle}>Spotkanie po latach</h3>
-          <h3 className={styles.Price}>200 zł</h3>
+          <h3 className={styles.Price}>220 zł</h3>
         </div>
         <p className={styles.SectionParagraph}>
           Aktualizacja danych, analiza wyników badań, analiza składu ciała, zalecenia żywieniowe i dieta na 7 dni
@@ -39,7 +39,7 @@ function Price() {
       <article className={styles.Section}>
         <div className={styles.SectionHeading}>
           <h3 className={styles.SectionTitle}>Wizyta kontrolna z dietą</h3>
-          <h3 className={styles.Price}>170 zł</h3>
+          <h3 className={styles.Price}>180 zł</h3>
         </div>
         <p className={styles.SectionParagraph}>
           Wizyta kontrolna z jadłospisem to dodatkowy tydzień diety, badanie
