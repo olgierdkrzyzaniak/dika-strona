@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Footer.module.css";
 
 function Footer() {
@@ -14,13 +13,13 @@ function Footer() {
         >
           <path
             d="M1187.5 49.5C793.89 122.823 192.833 124.5 1 49.5V257H2263.5V78.5C2008.17 13.1667 1676 -41.5 1187.5 49.5Z"
-            fill="#f55004"
-            stroke="#f55004"
+            fill="var(--color-accent-fill)"
+            stroke="var(--color-accent-fill)"
           />
         </svg>
       </div>
       <div className={styles.Background}>
-        <footer className={styles.Footer}>
+        <div className={styles.Footer}>
           <div className={styles.Wrapper}>
             <h2 className={styles.Logo}>Dika</h2>
             <div className={styles.Contact}>
@@ -54,7 +53,7 @@ function Footer() {
           <p className={styles.Copyright}>
             © 2024 by Olgierd Krzyżaniak. Kocham Cię mamo :).
           </p>
-        </footer>
+        </div>
       </div>
     </footer>
   );

@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./CopyToClipboard.module.css";
 
 function CopyToClipboard({ content, children }) {
-  const [coppied, setCopied] = React.useState(false);
+  const [copied, setCopied] = React.useState(false);
   const [timeoutId, setTimeoutId] = React.useState(null);
   const handleClick = () => {
     clearTimeout(timeoutId);
@@ -19,7 +19,7 @@ function CopyToClipboard({ content, children }) {
     <button className={styles.Button} onClick={handleClick}>
       {children}
       <p className={styles.Text}>
-        {coppied ? "(Skopiowano!)" : "(Kliknij aby skopiować kontakt.)"}
+        {copied ? "(Skopiowano!)" : "(Kliknij aby skopiować kontakt.)"}
       </p>
     </button>
   );

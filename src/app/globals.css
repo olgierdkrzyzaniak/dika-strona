@@ -1,10 +1,21 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/*
+  Design Tokens
+*/
+:root {
+  --color-accent: hsl(16, 96%, 50%);
+  --color-accent-warm: hsl(21, 100%, 54%);
+  --color-accent-gradient-start: #ff4500;
+  --color-accent-gradient-end: #ff44007c;
+  --color-accent-circle-start: #ff44005c;
+  --color-accent-circle-end: #ff440064;
+  --color-accent-svg: #FA4705;
+  --color-accent-fill: #f55004;
+  --color-bg: hsl(48, 24%, 96%);
+  --color-white: white;
 }
 
 /*
+  CSS Reset (Josh Comeau)
   1. Use a more-intuitive box-sizing model.
 */
 *,
@@ -18,6 +29,7 @@
 */
 * {
   margin: 0;
+  padding: 0;
 }
 
 /*
@@ -91,19 +103,16 @@ a {
   text-decoration: none;
 }
 
-/*  */
-
 body {
   width: 100%;
   height: 300vh;
   margin: 0;
-  /* background: hsl(48, 24%, 96%, 100%); */
-  background: hsl(48, 24%, 96%, 100%);
+  background: var(--color-bg);
 }
 
 *::selection {
-  background: hsl(16, 96%, 50%, 100%);
-  color: white;
+  background: var(--color-accent);
+  color: var(--color-white);
 }
 
 @media (prefers-reduced-motion: no-preference) {

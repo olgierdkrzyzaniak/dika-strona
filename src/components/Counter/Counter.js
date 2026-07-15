@@ -8,25 +8,23 @@ import {
   motion,
   useMotionValueEvent,
 } from "framer-motion";
-import styles from "./Counter.module.css"; // Adjust the import path as necessary
+import styles from "./Counter.module.css";
 
 function Counter({ children, rating, plus }) {
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
   const ref = React.useRef();
-  const isInView = useInView(ref, { once: true }); // Configuring it to trigger only once
+  const isInView = useInView(ref, { once: true });
   const [value, setValue] = React.useState(0);
 
   React.useEffect(() => {
     if (isInView) {
-      // Only start the animation if the element is in view
       animate(count, parseInt(children, 10), {
         type: "spring",
         stiffness: 15,
-        onComplete: (v) => {},
       });
     }
-  }, [isInView, children]); // Reacting to changes in isInView and children
+  }, [isInView, children, count]);
 
   useMotionValueEvent(rounded, "change", (latest) => {
     setValue(latest);

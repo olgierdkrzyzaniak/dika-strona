@@ -4,34 +4,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./Navbar.module.css";
 import Menu from "../Menu";
 import LinkButton from "../LinkButton";
+import { staggerContainer, staggerItem } from "@/lib/animations";
 
 function Navbar() {
-  //TODO: Use Ref from Home to track the scroll
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 0.04], [8, 1]);
 
   const y = useTransform(scrollYProgress, [0, 0.04], [300, 0]);
   const x = useTransform(scrollYProgress, [0, 0.04], [15, 0]);
-
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChWildren: 0.5,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  };
 
   return (
     <nav className={styles.Navbar}>
@@ -49,25 +29,25 @@ function Navbar() {
       </div>
       <motion.div
         className={styles.MenuList}
-        variants={container}
+        variants={staggerContainer}
         initial="hidden"
         animate="visible"
       >
         <div className={styles.LinksWrapper}>
-          <motion.article key="1" variants={item}>
+          <motion.div key="1" variants={staggerItem}>
             <LinkButton>
               <a className={styles.Link} href="#about">
                 o poradni
               </a>
             </LinkButton>
-          </motion.article>
-          <motion.article key="2" variants={item}>
+          </motion.div>
+          <motion.div key="2" variants={staggerItem}>
             <LinkButton>
               <a className={styles.Link} href="#track">
                 o współpracy
               </a>
             </LinkButton>
-          </motion.article>
+          </motion.div>
         </div>
         <div className={styles.LogoWrapper}>
           <motion.div
@@ -85,20 +65,20 @@ function Navbar() {
           </motion.div>
         </div>
         <div className={styles.LinksWrapper}>
-          <motion.article key="3" variants={item}>
+          <motion.div key="3" variants={staggerItem}>
             <LinkButton>
               <a className={styles.Link} href="#price">
                 oferta
               </a>
             </LinkButton>
-          </motion.article>
-          <motion.article key="4" variants={item}>
+          </motion.div>
+          <motion.div key="4" variants={staggerItem}>
             <LinkButton>
               <a className={styles.Link} href="#contact">
                 kontakt
               </a>
             </LinkButton>
-          </motion.article>
+          </motion.div>
         </div>
       </motion.div>
     </nav>

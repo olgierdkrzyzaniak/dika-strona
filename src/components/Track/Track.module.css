@@ -31,10 +31,6 @@
   flex-shrink: 0;
 }
 
-/* .progress svg {
-  transform: translateX(-50px) rotate(-90deg);
-} */
-
 .progress circle {
   stroke-dashoffset: 0;
   stroke-width: 5%;
@@ -42,7 +38,7 @@
 }
 
 .bg {
-  stroke: hsl(21, 100%, 54%);
+  stroke: var(--color-accent-warm);
   opacity: 0.2;
   stroke-width: 3;
 }
@@ -52,11 +48,11 @@
   top: 13px;
   left: 30px;
   font-weight: 700;
-  color: hsl(21, 100%, 54%);
+  color: var(--color-accent-warm);
 }
 
 .progress .indicator {
-  stroke: hsl(21, 100%, 54%);
+  stroke: var(--color-accent-warm);
   stroke-width: 3;
 }
 
@@ -64,8 +60,6 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 400px;
-  /* border: 2px dotted hsl(21, 100%, 54%); */
   width: clamp(350px, 60%, 600px);
   max-width: 100%;
 }
@@ -78,7 +72,7 @@
 .SectionHeading {
   font-family: var(--font-title);
   padding-top: 9px;
-  color: hsl(21, 100%, 54%);
+  color: var(--color-accent-warm);
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: -0.05em;
@@ -94,6 +88,10 @@
   line-height: 100%;
 }
 
+.accent {
+  color: var(--color-accent);
+}
+
 .circle {
   position: absolute;
   top: 0;
@@ -101,6 +99,10 @@
   width: 1000px;
   height: 1000px;
   clip-path: circle(50% at 50% 50%);
-  background: linear-gradient(90deg, #ff44005c, #ff440064);
+  background: linear-gradient(
+    90deg,
+    var(--color-accent-circle-start),
+    var(--color-accent-circle-end)
+  );
   z-index: -2;
 }

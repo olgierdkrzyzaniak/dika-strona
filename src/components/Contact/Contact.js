@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Contact.module.css";
 import CopyToClipboard from "../CopyToClipboard";
 
@@ -11,7 +10,7 @@ ul. Armii Poznań 1, Chodzież`;
     <section className={styles.Wrapper} id="contact">
       <CopyToClipboard content={contact}>
         <h2 className={styles.Title}>
-          Kontakt<span style={{ color: "hsl(16, 96%, 50%, 100%)" }}> :</span>
+          Kontakt<span className={styles.accent}> :</span>
         </h2>
       </CopyToClipboard>
       <article className={styles.Section}>

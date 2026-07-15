@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./About.module.css";
 import Counter from "@/components/Counter";
 
@@ -9,7 +8,7 @@ function About() {
         <section id={styles.Section}>
           <h2 className={styles.Title}>
             Kim jestem
-            <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
+            <span className={styles.accent}>?</span>
           </h2>
           <p className={styles.paragraph}>
             Skoro to pierwszy krok w twojej podróży ku lepszemu zdrowiu dobrze
@@ -27,7 +26,7 @@ function About() {
         <section>
           <h3 className={styles.SectionHeading}>
             Jakie są moje kwalifikacje{" "}
-            <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
+            <span className={styles.accent}>?</span>
           </h3>
           <p className={styles.paragraph}>
             Moja edukacyjna podróż rozpoczęła się na Akademii Rolniczej, gdzie
@@ -36,19 +35,19 @@ function About() {
             specjalizując się w Dietetyce i Planowaniu Żywienia.
           </p>
           <p className={styles.paragraph}>
-            Prawie trzy dekady doświadczenia, w tym 12 lat poświęconych praktyce
+            Ponad trzy dekady doświadczenia, w tym 14 lat poświęconych praktyce
             dietetycznej oraz wcześniejsza praca w zakładach przemysłu
             spożywczego i laboratoriach badawczych, pozwoliły mi zgromadzić
             obszerną wiedzę i doświadczenie w dziedzinie żywności i żywienia. Ta
             podróż dała mi nie tylko cenne umiejętności, ale także możliwość
-            współpracy z ponad 3000 osób, którym pomogłam odnaleźć satysfakcję i
+            współpracy z ponad 3500 osób, którym pomogłam odnaleźć satysfakcję i
             zdrowie w ich codziennym żywieniu.
           </p>
         </section>
         <section>
           <h3 className={styles.SectionHeading}>
             Jak mogę Ci pomóc{" "}
-            <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
+            <span className={styles.accent}>?</span>
           </h3>
           <p className={styles.paragraph}>
             Specjalizuję się w tworzeniu spersonalizowanych jadłospisów, które
@@ -67,7 +66,7 @@ function About() {
         </section>
         <section>
           <h3 className={styles.SectionHeading}>
-            Oferuję<span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>:</span>
+            Oferuję<span className={styles.accent}>:</span>
           </h3>
           <ul className={styles.List}>
             <li className={styles.ListItem}>
@@ -98,7 +97,6 @@ function About() {
             <li className={styles.ListItem}>
               żywienie w chorobach nowotworowych
             </li>
-
             <li className={styles.ListItem}>
               wsparcie w zmianie nawyków żywieniowych
             </li>
@@ -111,13 +109,13 @@ function About() {
         <div className={styles.CountersGrid}>
           <div className={styles.CounterWrapper}>
             <Counter duration={10} plus>
-              3000
+              3500
             </Counter>
             <p className={styles.CounterParagraph}>Zadowolonych pacjentów</p>
           </div>
           <div className={styles.CounterWrapper}>
             <Counter duration={10} plus>
-              12
+              14
             </Counter>
             <p className={styles.CounterParagraph}>
               Lat doświadczenia w pracy dietetyka i 17 lat w branży spożywczej

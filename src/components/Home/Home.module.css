@@ -54,7 +54,10 @@
     left: -0.5rem;
     z-index: 0;
     visibility: revert;
-    background: -webkit-linear-gradient(#ff4500, #ff44007c);
+    background: -webkit-linear-gradient(
+      var(--color-accent-gradient-start),
+      var(--color-accent-gradient-end)
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -26,13 +26,11 @@
 }
 
 .LinksWrapper {
-  color: hsl(16, 96%, 50%, 100%);
-
+  color: var(--color-accent);
   flex: 1;
   flex-basis: 500px;
   display: flex;
   justify-content: space-evenly;
-  /* gap: clamp(1rem, 10vw, 5rem); */
 }
 
 .Logo {
@@ -45,13 +43,15 @@
   font-family: var(--font-title);
   letter-spacing: -0.1em;
   font-weight: 600;
-  background: -webkit-linear-gradient(#ff4500, #ff44007c);
+  background: -webkit-linear-gradient(
+    var(--color-accent-gradient-start),
+    var(--color-accent-gradient-end)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-right: 0.2rem;
   user-select: none;
-  /* transform: translateY(10.5rem); */
 }
 
 .Link {
@@ -81,7 +81,10 @@
   font-weight: 600;
   font-family: var(--font-title);
   letter-spacing: -0.1em;
-  background: -webkit-linear-gradient(#ff4500, #ff44007c);
+  background: -webkit-linear-gradient(
+    var(--color-accent-gradient-start),
+    var(--color-accent-gradient-end)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -92,12 +95,12 @@
 .Contact {
   position: relative;
   left: 8px;
-  background: hsl(16, 96%, 50%, 100%);
+  background: var(--color-accent);
   font-family: var(--font);
   font-style: normal;
   border: transparent;
   padding: 8px;
-  color: white;
+  color: var(--color-white);
   font-weight: 400;
   border-radius: 9999px 9999px;
 }

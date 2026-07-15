@@ -11,28 +11,10 @@ import {
 
 import styles from "./Menu.module.css";
 import { motion } from "framer-motion";
+import { staggerContainer, staggerItem } from "@/lib/animations";
 
 function SideMenu() {
   let [isOpen, setOpen] = React.useState(false);
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        // delayChildren: 0.5,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  };
 
   return (
     <DialogTrigger>
@@ -53,27 +35,27 @@ function SideMenu() {
                 </Heading>
                 <motion.ul
                   className={styles.MenuList}
-                  variants={container}
+                  variants={staggerContainer}
                   initial="hidden"
                   animate="visible"
                 >
-                  <motion.li key="1" variants={item} className={styles.Item}>
+                  <motion.li key="1" variants={staggerItem} className={styles.Item}>
                     <a href="#about" onClick={close}>
                       o poradni <span className={styles.Number}>01</span>
                     </a>
                   </motion.li>
-                  <motion.li key="2" variants={item} className={styles.Item}>
+                  <motion.li key="2" variants={staggerItem} className={styles.Item}>
                     <a href="#track" onClick={close}>
                       o współpracy <span className={styles.Number}>02</span>
                     </a>
                   </motion.li>
 
-                  <motion.li key="3" variants={item} className={styles.Item}>
+                  <motion.li key="3" variants={staggerItem} className={styles.Item}>
                     <a href="#price" onClick={close}>
                       oferta <span className={styles.Number}>03</span>
                     </a>
                   </motion.li>
-                  <motion.li key="4" variants={item} className={styles.Item}>
+                  <motion.li key="4" variants={staggerItem} className={styles.Item}>
                     <a href="#contact" onClick={close}>
                       kontakt <span className={styles.Number}>04</span>
                     </a>

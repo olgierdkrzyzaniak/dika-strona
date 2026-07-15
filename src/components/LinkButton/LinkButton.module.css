@@ -21,7 +21,7 @@
 }
 
 .button path {
-  stroke: #f55004;
+  stroke: var(--color-accent-fill);
   stroke-width: 8px;
   stroke-dasharray: 0 1500;
 }

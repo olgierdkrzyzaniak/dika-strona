@@ -1,53 +1,6 @@
-"use client";
-
-import React from "react";
-import { motion, useScroll } from "framer-motion";
 import styles from "./Track.module.css";
-import { JetBrains_Mono } from "next/font/google";
-import clsx from "clsx";
 import Line from "@/components/Line";
-
-const jetbrains_mono = JetBrains_Mono({
-  subsets: ["latin"],
-});
-
-function Item({ style, id, children }) {
-  const ref = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    //TODO: adjust offset
-    offset: ["start end", "end end"],
-  });
-
-  return (
-    <article ref={ref} className={styles.section} style={style}>
-      <div className={styles.Heading}>
-        <span className={clsx(jetbrains_mono.className, styles.id)}>{id}</span>
-        <figure className={styles.progress}>
-          <svg id="progress" width="50" height="50" viewBox="0 0 100 100">
-            <circle
-              cx="50"
-              cy="50"
-              r="20"
-              pathLength="1"
-              className={styles.bg}
-            />
-            <motion.circle
-              cx="50"
-              cy="50"
-              r="20"
-              pathLength="1"
-              className={styles.indicator}
-              style={{ pathLength: scrollYProgress }}
-            />
-          </svg>
-        </figure>
-        {children[0]}
-      </div>
-      {children[1]}
-    </article>
-  );
-}
+import TrackItem from "./TrackItem";
 
 function Track() {
   return (
@@ -56,11 +9,11 @@ function Track() {
       <div className={styles.Track}>
         <h2 className={styles.Title}>
           Jak będzie wyglądać<br></br> nasza współpraca
-          <span style={{ color: "hsl(16, 96%, 50%, 100%)" }}>?</span>
+          <span className={styles.accent}>?</span>
         </h2>
         <div className={styles.circle} />
 
-        <Item id={1} style={{ alignSelf: "flex-start" }}>
+        <TrackItem id={1} style={{ alignSelf: "flex-start" }}>
           <h3 className={styles.SectionHeading}>Pierwsza wizyta</h3>
           <p className={styles.paragraph}>
             Na początku naszej współpracy spotkamy się na wizycie, którą
@@ -70,8 +23,8 @@ function Track() {
             preferencjach, a także o tym, co sprawia Ci radość. Im lepiej Cię
             poznam, tym łatwiej stworzymy spersonalizowany plan żywieniowy.
           </p>
-        </Item>
-        <Item id={2} style={{ alignSelf: "flex-end", marginTop: "100px" }}>
+        </TrackItem>
+        <TrackItem id={2} style={{ alignSelf: "flex-end", marginTop: "100px" }}>
           <h3 className={styles.SectionHeading}>
             Opracowuję dietę dostosowaną do twoich potrzeb
           </h3>
@@ -82,8 +35,8 @@ function Track() {
             uwzględniam Twoje preferencje kulinarne, dzięki czemu dieta nie
             będzie tylko zdrowa, ale także smaczna i satysfakcjonująca.
           </p>
-        </Item>
-        <Item
+        </TrackItem>
+        <TrackItem
           id={3}
           style={{
             alignSelf: "flex-start",
@@ -104,8 +57,8 @@ function Track() {
             telefoniczne. Twoje sukcesy są moimi sukcesami, więc czuj się
             swobodnie dzielić każdym krokiem na drodze do lepszego zdrowia.
           </p>
-        </Item>
-        <Item id={4} style={{ alignSelf: "flex-end", marginTop: "100px" }}>
+        </TrackItem>
+        <TrackItem id={4} style={{ alignSelf: "flex-end", marginTop: "100px" }}>
           <h3 className={styles.SectionHeading}>
             Wizyta kontrolna i planowanie dalszych działań
           </h3>
@@ -118,7 +71,7 @@ function Track() {
             kolejne wyzwania. Pamiętaj, jestem tu po to, aby Cię wspierać w
             każdym etapie tego fascynującego i korzystnego dla zdrowia procesu!
           </p>
-        </Item>
+        </TrackItem>
       </div>
     </section>
   );

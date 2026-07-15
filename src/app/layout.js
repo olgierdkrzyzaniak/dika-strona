@@ -33,7 +33,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <RespectMotionPreferences>
-      <html lang="en">
+      <html lang="pl">
         <body
           className={clsx(
             titleFont.variable,

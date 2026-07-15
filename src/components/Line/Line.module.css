@@ -1,5 +1,4 @@
 .Line {
-  --top: calc(10000px / 6vw);
   z-index: -1;
   position: absolute;
   top: 126px;
@@ -7,6 +6,3 @@
   height: 2800px;
   overflow: hidden;
 }
-
-/* 7.6vw */
-/* 116px */
