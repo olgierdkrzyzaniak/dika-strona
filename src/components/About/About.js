@@ -118,7 +118,7 @@ function About() {
               14
             </Counter>
             <p className={styles.CounterParagraph}>
-              Lat doświadczenia w pracy dietetyka i 17 lat w branży spożywczej
+              Lat doświadczenia w pracy dietetyka i 19 lat w branży spożywczej
             </p>
           </div>
           <div className={styles.CounterWrapper}>
